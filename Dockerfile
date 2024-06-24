@@ -1,4 +1,4 @@
-FROM jdk17:latest
+FROM registry.cn-chengdu.aliyuncs.com/guoty/jdk17:latest
 LABEL authors="guotianyu"
 WORKDIR /app
 COPY build/libs/graalvm-demo-0.0.1-SNAPSHOT.jar /app.jar
