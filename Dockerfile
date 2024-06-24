@@ -1,4 +1,4 @@
-FROM openjdk:17
+FROM jdk17:latest
 LABEL authors="guotianyu"
 WORKDIR /app
 COPY build/libs/graalvm-demo-0.0.1-SNAPSHOT.jar /app.jar
