@@ -1,6 +1,6 @@
-FROM registry.cn-chengdu.aliyuncs.com/guoty/jdk17:latest
+FROM openjdk:17
 LABEL authors="guotianyu"
-WORKDIR /tmp
+WORKDIR /app
 COPY build/libs/graalvm-demo-0.0.1-SNAPSHOT.jar /app.jar
 EXPOSE 28081
 # 执行命令
