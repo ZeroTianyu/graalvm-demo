@@ -9,6 +9,16 @@ public class GraalvmDemoApplication {
     public static void main(String[] args) {
         SpringApplication.run(GraalvmDemoApplication.class, args);
         System.out.println("Hello World!");
+        System.out.println("Hello World!");
+        System.out.println("Hello World!");
+        System.out.println("Hello World!");
+        System.out.println("Hello World!");
+        System.out.println("Hello World!");
+        System.out.println("Hello World!");
+        System.out.println("Hello World!");
+        System.out.println("Hello World!");
+        System.out.println("Hello World!");
+        System.out.println("Hello World!");
     }
 
 }
