@@ -1,7 +1,0 @@
-spring:
-  cloud:
-    openfeign:
-      client:
-        config:
-          productpage:
-            url: http://productpage.bookinfo.com
