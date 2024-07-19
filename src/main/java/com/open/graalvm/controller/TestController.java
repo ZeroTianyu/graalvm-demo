@@ -21,7 +21,7 @@ public class TestController {
 
     @GetMapping("/test")
     public String test() {
-        return restTemplate.getForObject("http://productpage.bookinfo.com/productpage", String.class);
+        return restTemplate.getForObject("http://productpage/productpage", String.class);
     }
 
     @GetMapping("/pagetest")

@@ -1,0 +1,48 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: graalvm-demo
+  labels:
+    app: graalvm-demo
+    service: graalvm-demo
+spec:
+  ports:
+    - port: 28081
+      name: http
+  selector:
+    app: graalvm-demo
+---
+
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: graalvm-demo
+  labels:
+    account: graalvm-demo
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: graalvm-demo-v1
+  labels:
+    app: graalvm-demo
+    version: v1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: graalvm-demo
+      version: v1
+  template:
+    metadata:
+      labels:
+        app: graalvm-demo
+        version: v1
+    spec:
+      serviceAccountName: graalvm-demo
+      containers:
+        - name: graalvm-demo
+          image: registry.cn-chengdu.aliyuncs.com/guoty/graalvm-demo:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 28081
